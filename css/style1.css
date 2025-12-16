@@ -1,0 +1,23 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: blue;
+}
+
+@media (min-width: 35rem) and (max-width: 75rem) {
+    body {
+        background-color: purple;
+    }
+}
+@media (min-width: 75rem) and (max-width: 87.5rem){
+    body
+    {background-color: white;}
+}
+
+@media (min-width: 1rem) and (max-width: 35rem){
+    body
+    {background-color: yellow;}
+}
