@@ -1,0 +1,85 @@
+
+
+
+.nav-desktop{
+    display: block;
+}
+
+@media (max-width: 40rem){
+    .nav-mobile{
+        transform: translateX(0%);
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+
+    .nav-mobile {
+        transform: translateX(-150%);
+
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .nav-icon-hamburger {
+        display: block;
+    }  
+    .nav-icon-close {
+        display: none;
+    }
+
+    .check:checked ~ .hamburger .nav-icon-hamburger {
+            /* 1) Hide it visually */
+        opacity: 0;
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+        /* 3) Hide it from screen readers */
+        visibility: hidden;
+        /* display: none; */
+    }
+    .check:checked ~ .hamburger .nav-icon-close {
+        display: block;
+    }
+    .check:checked ~ .nav-mobile {
+        transform: translateX(0%);
+    }
+
+}
+
+.check {
+    position: absolute;
+    left: -500px;
+}
+
+@media (min-width: 40rem){
+    .hamburger {
+        display: none;
+    }
+}
+
+.nav-mobile{
+    transform: translateX(-150%);
+    transition: transform .5s ease;
+}
+
+.nav-desktop ul{
+
+    display: flex;
+    
+    list-style: none;
+    
+    flex-direction: row;
+
+    gap: 16px;
+}
+
+.nav-mobile ul{
+    display: flex;
+
+    list-style: none;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
